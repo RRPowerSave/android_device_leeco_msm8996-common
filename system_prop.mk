@@ -107,16 +107,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.hw=1 \
-    debug.egl.hw=1 \
     debug.gralloc.enable_fb_ubwc=1 \
-    dev.pm.dyn_samplingrate=1 \
-    persist.demo.hdmirotationlock=false \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0 \
     sdm.perf_hint_window=50 \
     persist.hwc.enable_vds=1 \
-    sdm.debug.disable_rotator_split=1 \
     ro.persist.qcapb = 1
 
 # OpenGLES
