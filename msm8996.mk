@@ -234,10 +234,6 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
-# stlport required for Camera blobs
-PRODUCT_PACKAGES += \
-    libstlport
-
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.msm8996
