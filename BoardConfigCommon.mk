@@ -149,10 +149,10 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
-  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
     ifeq ($(WITH_DEXPREOPT),)
       WITH_DEXPREOPT := true
-    endif
+   endif
   endif
 endif
 
@@ -172,7 +172,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 # TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 TARGET_USES_MEDIA_EXTENSIONS := true
 # RIL
-TARGET_RIL_VARIANT := caf
+# TARGET_RIL_VARIANT := caf
 
 # Sensors
 USE_SENSOR_MULTI_HAL := true
