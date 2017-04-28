@@ -121,6 +121,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Snap \
     libcamera_shim \
+    libc_shim \
     libstlport
 
 # Connectivity Engine support (CNE)
