@@ -103,7 +103,7 @@ BOARD_HAS_QCA_BT_ROME := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_USE_BTNV := true
-QCOM_BT_USE_SMD_TTY := true
+#QCOM_BT_USE_SMD_TTY := true
 
 # Camera
 BOARD_QTI_CAMERA_32BIT_ONLY := true
@@ -126,13 +126,6 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 
 # Power
 TARGET_PROVIDES_POWERHAL := true
-BOARD_HAL_STATIC_LIBRARIES := libdumpstate.msm8996
-
-# CM Hardware
-#BOARD_HARDWARE_CLASS += \
-#    hardware/cyanogen/cmhw \
-#    $(PLATFORM_PATH)/cmhw
-#BOARD_USES_CYANOGEN_HARDWARE := true
 
 # CNE and DPM
 TARGET_LDPRELOAD := libNimsWrap.so
