@@ -1,2 +1,4 @@
 allow ims diag_prop:property_service set;
 allow ims self:capability { net_raw };
+allow ims diag_device:chr_file { read write };
+allow ims diag_device:chr_file open;

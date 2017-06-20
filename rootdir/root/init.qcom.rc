@@ -333,6 +333,11 @@ on post-fs-data
     chmod 0644 /persist/sensors/gyro_sensitity_cal
     chown system root /persist/sensors/sensors_settings
     chown system root /persist/sensors/gyro_sensitity_cal
+    chmod -h 775 /persist/sensors
+    chmod -h 664 /persist/sensors/sensors_settings
+    chown -h system.root /persist/sensors/sensors_settings
+    mkdir -p /data/misc/sensors
+    chmod -h 775 /data/misc/sensors
 
     # Create directories for Fingerprint
     mkdir /data/fpc_images 0770 system system
