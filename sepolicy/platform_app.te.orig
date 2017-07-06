@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+allow platform_app app_data_file:dir r_dir_perms;
+allow platform_app sysfs_ir_enable:file rw_file_perms;
+
+=======
+allow platform_app app_data_file:file execute;
+>>>>>>> 9b132a9... msm8996-common: sepolicy: Fix snap
