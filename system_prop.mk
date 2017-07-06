@@ -46,13 +46,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.gapless.enabled=true \
     audio.safx.pbe.enabled=true \
     audio.parser.ip.buffer.size=262144 \
-    audio.dolby.ds2.enabled=true \
+    audio.dolby.ds2.enabled=false \
     audio.dolby.ds2.hardbypass=false \
     audio.offload.passthrough=false \
-    audio.offload.multiple.enabled=true \
+    audio.offload.multiple.enabled=false \
     audio.offload.min.duration.secs=30 \
     af.fast_track_multiplier=1 \
-    audio_hal.period_size=192
+    audio_hal.period_size=192 \
+    audio.sv.earpiece.enable=true \
+    audio.sv.speaker.enable=false
+
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
