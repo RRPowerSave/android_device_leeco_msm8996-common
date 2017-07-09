@@ -52,10 +52,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.multiple.enabled=false \
     audio.offload.min.duration.secs=30 \
     af.fast_track_multiplier=1 \
-    audio_hal.period_size=192 \
-    audio.sv.earpiece.enable=true \
-    audio.sv.speaker.enable=false
-
+    audio_hal.period_size=192
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
