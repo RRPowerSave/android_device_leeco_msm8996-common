@@ -6,11 +6,3 @@ allow sensors persist_file:file { append create open read getattr write };
 
 allow sensors diag_device:chr_file { rw_file_perms };
 
-allow sensors unlabeled:dir { getattr search };
-allow sensors unlabeled:dir setattr;
-allow sensors unlabeled:file getattr;
-allow sensors unlabeled:dir read;
-allow sensors unlabeled:file { append read write };
-allow sensors unlabeled:dir { open write };
-allow sensors unlabeled:file open;
-
