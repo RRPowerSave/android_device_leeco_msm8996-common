@@ -34,7 +34,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     tunnel.audio.encode=false \
     media.aac_51_output_enabled=true \
     audio.heap.size.multiplier=7 \
-    audio.offload.buffer.size.kb=64 \
+    audio.offload.buffer.size.kb=31457280 \
     audio.offload.video=true \
     audio.offload.pcm.16bit.enable=true \
     audio.offload.pcm.24bit.enable=true \
@@ -49,7 +49,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.dolby.ds2.hardbypass=false \
     audio.offload.passthrough=false \
     audio.offload.multiple.enabled=false \
-    audio.offload.min.duration.secs=30 \
+    audio.offload.min.duration.secs=0 \
     af.fast_track_multiplier=1 \
     ro.config.vc_call_vol_steps=14 \
     ro.config.media_vol_steps=30 \
@@ -236,3 +236,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.VT_ENABLE=1 \
     persist.radio.REVERSE_QMI=0 \
     persist.radio.ROTATION_ENABLE=1 \
+
+# LePref
+    PRODUCT_PROPERTY_OVERRIDES += \
+    persist.semiidle.enabled=0
