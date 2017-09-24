@@ -26,7 +26,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-#define LOG_NIDEBUG 0
+#define LOG_NIDEBUG 1
 
 #include <errno.h>
 #include <string.h>
@@ -78,9 +78,10 @@ static int profile_high_performance[] = {
 };
 
 static int profile_power_save[] = {
-    CPUS_ONLINE_MAX_LIMIT_BIG, 0x1,
-    MAX_FREQ_BIG_CORE_0, 0x3E8,
-    MAX_FREQ_LITTLE_CORE_0, 0x3E8,
+    CPUS_ONLINE_MAX_LIMIT_BIG, 0x0,
+    CPUS_ONLINE_MAX_LIMIT_LITTLE, 0x1,
+    MAX_FREQ_BIG_CORE_0, 0x168,
+    MAX_FREQ_LITTLE_CORE_0, 0x168,
 };
 
 static int profile_bias_power[] = {
