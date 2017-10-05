@@ -53,6 +53,25 @@
             android:title="@string/semiidle_title"
             android:summary="@string/semiidle_summary" />
 
+        <SwitchPreference
+            android:key="cpusleep"
+            android:defaultValue="false"
+            android:title="@string/cpusleep_title"
+            android:summary="@string/cpusleep_summary" />
+
+	</PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="imssrv_pref"
+        android:title="@string/imssrv_pref_title" >
+
+
+        <SwitchPreference
+            android:key="imssrv"
+            android:defaultValue="false"
+            android:title="@string/imssrv_title"
+            android:summary="@string/imssrv_summary" />
+
 	</PreferenceCategory>
 
 </PreferenceScreen>
