@@ -57,7 +57,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    bt.max.hfpclient.connections=1 \
+    bt.max.hfpclient.connections=2 \
     qcom.bluetooth.soc=rome \
     ro.bluetooth.wipower=true \
     ro.bluetooth.emb_wp_mode=true
@@ -89,7 +89,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.cne.feature=1
+    persist.cne.feature=0
 
 # Data modules
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -135,7 +135,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QCOM
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.frp.pst="/dev/block/bootdevice/by-name/frp" \
+    #ro.frp.pst="/dev/block/bootdevice/by-name/frp" \
     drm.service.enabled=true
 
 # RIL
@@ -157,7 +157,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=22,22 \
     persist.radio.data_ltd_sys_ind=1 \
     ro.telephony.call_ring.multiple=false \
-    persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.apm_sim_not_pwdn=0 \
     persist.radio.custom_ecc=1 \
     persist.radio.sib16_support=1 \
     persist.data.qmi.adb_logmask=0 \
