@@ -42,7 +42,7 @@ on early-init
     write /sys/block/zram0/comp_algorithm lz4
 
 on init
-    export LD_SHIM_LIBS "/system/lib/hw/camera.msm8996.so|libcamera_shim.so:/system/bin/mm-qcamera-daemon|qcamera-daemon_shim.so"
+    export LD_SHIM_LIBS "/system/lib/hw/camera.msm8996.so|libcamera_shim.so:/system/bin/mm-qcamera-daemon|qcamera-daemon_shim.so:/system/vendor/lib64/lib-imsvt.so|libshims_ims.so"
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system
@@ -628,14 +628,27 @@ on property:persist.sys.pd_enable=1
 on property:persist.sys.pd_enable=0
     write /sys/class/service_locator/service_locator_status 0
 
+on property:persist.ims.enabled=1
+    start imsqmidaemon
+
+on property:persist.ims.enabled=0
+    stop imsdatadaemon
+    stop imsqmidaemon
+    stop ims_rtp_daemon
+    stop imscmservice
+
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
+
+on property:sys.ims.QMI_DAEMON_STATUS=0
+    stop imsdatadaemon
 
 service ims_rtp_daemon /system/bin/ims_rtp_daemon
     class main
     user system
     socket ims_rtpd stream 0660 system radio
     group radio net_raw diag inet log
+    writepid /dev/cpuset/system-background/tasks
     disabled
 
 service imscmservice /system/bin/imscmservice
@@ -648,6 +661,11 @@ service imscmservice /system/bin/imscmservice
 on property:sys.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
     start imscmservice
+
+on property:sys.ims.DATA_DAEMON_STATUS=0
+    stop ims_rtp_daemon
+    stop imscmservice
+
 
 service dtseagleservice /system/bin/dts_eagle_service
     class late_start
